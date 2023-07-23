@@ -26,52 +26,51 @@ function updateImage() {
 }
 updateImage();
 
+function generateHTML(lodge) {
+  
+  return `
+    <div class="flex">
+      <img src="${lodge.images}" class="h-14 w-auto" alt="">
+      <div>
+        <p class="font-semibold">${lodge.name}</p>
+        <div>
+          <p class="text-gray-400 font-medium text-xs">Location: ${lodge.location}</p>
+        </div>
+      </div>
+      <span class="pl-14 text-green-900 font-semibold">#${lodge.amount}</span>
+      
+      
+    </div>
+    <div class="mt-2 flex">
+      <button id="details" class="bg-gray-300 p-1 px-10 rounded-sm">Details</button>
+    <div class="bg-green-900 p-1 rounded-sm order-last">
+        <img src="../img/chat.png" class="w-6 h-auto" alt="">
+      </div>
+      <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm">Message</p>
+    </div>
+  `;
+}
+
 async function fetchAllLodges() {
   try {
     const response = await fetch(API_URL);
     if (!response.ok) {
       throw new Error(`Failed to fetch: ${response.status}`);
     }
-    const data = await response.json();
-    if (Array.isArray(data)) {
-        data.map(lodge => {
-            const { name, amount, location, images} = lodge;
-            console.log(name);
-        });
-    } else {
-      console.log('Invalid API response format.');
-    }
+    const json = await response.json();
+    const data = json.data.map(lodge => ({ id: lodge.id, name: lodge.name, amount: lodge.amount, location: lodge.location, images: lodge.images}));
+    
+    const dataDisplayDiv = document.getElementById('lodgeDisplay');
+    
+    data.forEach(lodge => {
+  const lodgeHTML = generateHTML(lodge);
+  dataDisplayDiv.innerHTML += lodgeHTML;
+});
   } catch (e) {
     console.error('Error fetching data:', e);
   }
 }
-
 document.addEventListener('DOMContentLoaded', fetchAllLodges);
 
 
-//         const lodgesArray = data.lodges;
-//         const lodgeContainer = document.getElementById("section");
-
-//         lodgeContainer.innerHTML = "";
-
-//         lodgesArray.forEach((lodge) => {
-//             const { name, location, amount, images } = lodge;
-
-//             const lodgeDiv = document.createElement("div");
-
-//             lodgeDiv.classList.add("flex");
-//             lodgeDiv.innerHTML = `
-//                 <img src="${images}" class="h-14 w-auto" alt="">
-//                 <div>
-//                     <p class="font-semibold">${name}</p>
-//                     <div>
-//                         <p class="text-gray-400 font-medium text-xs">Location: ${location}</p>
-//                     </div>
-//                 </div>
-//                 <span class="pl-14 text-green-900 font-semibold">#${amount}</span>
-//             `;
-
-//             // Add the lodge element to the container
-//             lodgeContainer.appendChild(lodgeDiv);
-//         });
 
