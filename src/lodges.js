@@ -69,6 +69,6 @@ async function fetchAllLodges() {
   }
 }
 function handleDetailsClick(lodgeId) {
-    window.location.href = `lodge_details.html?id=${lodgeId}`;
+    window.location.href = `lodge.details.html?id=${lodgeId}`;
 }
 document.addEventListener('DOMContentLoaded', fetchAllLodges);

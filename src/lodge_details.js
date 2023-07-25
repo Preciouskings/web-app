@@ -1,3 +1,4 @@
+
 const API_URL = 'https://home-ease.onrender.com/api/lodges';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching data:', e);
         }
     }
+    // lodge_details.js
+function generateLodgeDetailsHTML(lodge) {
+  return `
+    <a href="lodges.html"><img src="../img/back.png" class="h-6 w-auto" alt="back"></a>
+    <div>
+      <img class="w-32 h-auto p-2" src="${lodge.images}" alt="">
+      <div class="mt-4 mb-6 flex space-x-4">
+          <div><img class="h-12 w-auto" src="../img/1.png" alt=""></div>
+          <div><img class="h-12 w-auto" src="../img/2.png" alt=""></div>
+          <div><img class="h-12 w-auto" src="../img/3.png" alt=""></div>
+          <div><img class="h-12 w-auto" src="../img/4.png" alt=""></div>
+      </div>
+      <p class="text-3xl font-bold text-slate-800 uppercase">${lodge.name}</p>
+      <p class="font-semibold p-1 text-slate-600">Location: ${lodge.location}</p>
+    </div>
+    <div class="absolute bottom-0 inset-x-0">
+      <div class="flex space-x-10">
+          <p class="font-semibold pl-4 text-4xl">#${lodge.amount}</p>
+          <p class="px-8 py-1 bg-green-900 rounded-md text-white text-2xl">Message</p>
+      </div>
+      <button class="font-normal hover:bg-slate-800 text-2xl bg-gray-500 m-4 mt-2 text-white px-28 py-1 rounded-md">Book a visit</button>
+    </div>
+  `;
+}
+
 
     // Call the function to fetch and display the specific lodge details
     fetchLodgeDetails();

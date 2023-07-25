@@ -8,30 +8,41 @@
     <link href="../src/styles.css" rel="stylesheet">
 </head>
 <body class="p-4">
-    <a href="../src/lodges.html"><img src="../img/back.png" class="h-6 w-auto" alt="back"></a>
-    <div>
-        <img  class="" src="../img/2.png" alt="">
-        <div class="mt-4 mb-6 flex space-x-4">
-            <div><img class="h-12 w-auto" src="../img/1.png" alt=""></div>
-            <div><img class="h-12 w-auto" src="../img/2.png" alt=""></div>
-            <div><img class="h-12 w-auto" src="../img/3.png" alt=""></div>
-            <div><img class="h-12 w-auto" src="../img/4.png" alt=""></div>
+    <!-- <a href="../src/lodges.html"><img src="../img/back.png" class="h-6 w-auto" alt="back"></a> -->
+    <div id="lodgeDetails">
+        <!-- <div>
+            <img class="" src="../img/2.png" alt="">
+            <div class="mt-4 mb-6 flex space-x-4">
+                <div><img class="h-12 w-auto" src="../img/1.png" alt=""></div>
+                <div><img class="h-12 w-auto" src="../img/2.png" alt=""></div>
+                <div><img class="h-12 w-auto" src="../img/3.png" alt=""></div>
+                <div><img class="h-12 w-auto" src="../img/4.png" alt=""></div>
+            </div>
+            <p class="text-3xl font-bold text-slate-800 uppercase">Excellent Lodge</p>
+            <p class="font-semibold p-1 text-slate-600">Location: Eziobodo, FUTO</p>
+            <p class="font-semibold p-1 text-slate-600">Light: Yes</p>
+            <p class="font-semibold p-1 text-slate-600">Water: Yes</p>
+            <p class="font-semibold p-1 text-slate-600">Tiled: Yes</p>
+            <p class="font-semibold p-1 text-slate-600">Transport to school: N200</p>
+            <p class="font-semibold p-1 text-slate-600">Network coverage: Average</p>
         </div>
-        <p class="text-3xl font-bold text-slate-800 uppercase">Excellent Lodge</p>
-        <p class="font-semibold p-1 text-slate-600">Location: Eziobodo, FUTO</p>
-        <p class="font-semibold p-1 text-slate-600">Light: Yes</p>
-        <p class="font-semibold p-1 text-slate-600">Water: Yes</p>
-        <p class="font-semibold p-1 text-slate-600">Tiled: Yes</p>
-        <p class="font-semibold p-1 text-slate-600">Transport to school: N200</p>
-        <p class="font-semibold p-1 text-slate-600">Network coverage: Average</p>
+        <div class="absolute bottom-0 inset-x-0">
+            <div class="flex space-x-10">
+                <p class="font-semibold pl-4 text-4xl">N120,000</p>
+                <p class="px-8 py-1 bg-green-900 rounded-md text-white text-2xl">Message</p>
+            </div>
+            <button class="font-normal hover:bg-slate-800 text-2xl bg-gray-500 m-4 mt-2 text-white px-28 py-1 rounded-md">Book a
+                visit</button>
+        </div> -->
     </div>
-    <div class="absolute bottom-0 inset-x-0">
-        <div class="flex space-x-10">
-            <p class="font-semibold pl-4 text-4xl">N120,000</p>
-            <p class="px-8 py-1 bg-green-900 rounded-md text-white text-2xl">Message</p>
-        </div>
-        <button class="font-normal hover:bg-slate-800 text-2xl bg-gray-500 m-4 mt-2 text-white px-28 py-1 rounded-md">Book a visit</button>
-    </div>
+    <script defer src="../src/utils.js"></script>
     <script defer src="../src/lodge_details.js"></script>
 </body>
 </html>
+
+<!-- <p class="font-semibold p-1 text-slate-600">Light: ${lodge.conditions.light ? 'Yes' : 'No' || 'Yes'}</p>
+<p class="font-semibold p-1 text-slate-600">Water: ${lodge.conditions.water ? 'Yes' : 'No' || 'Yes'}</p>
+<p class="font-semibold p-1 text-slate-600">Tiled: ${lodge.conditions.tiled ? 'Yes' : 'No' || 'Yes'}</p>
+<p class="font-semibold p-1 text-slate-600">Transport to school: ${lodge.conditions.transportFareToSchool ?
+    `N${lodge.conditions.transportFareToSchool}` : 'No' || 400}</p>
+<p class="font-semibold p-1 text-slate-600">Network coverage: ${lodge.conditions.networkCoverage || 'Not specified'}</p> -->
