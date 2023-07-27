@@ -28,7 +28,7 @@ updateImage();
 function generateHTML(lodge) {
   return `
     <div class="flex">
-      <img src="${lodge.images}" class="h-14 w-auto" alt="">
+      <img src="${lodge.images[0]}" class="h-14 w-auto" alt="">
       <div>
         <p class="font-semibold">${lodge.name}</p>
         <div>

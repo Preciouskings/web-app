@@ -27,12 +27,12 @@ function generateLodgeDetailsHTML(lodge) {
   return `
     <a href="lodges.html"><img src="../img/back.png" class="h-6 w-auto" alt="back"></a>
     <div>
-      <img class="w-32 h-auto p-2" src="${lodge.images}" alt="">
+      <img class="w-32 h-auto p-2" src="${lodge.images[2]}" alt="">
       <div class="mt-4 mb-6 flex space-x-4">
-          <div><img class="h-12 w-auto" src="../img/1.png" alt=""></div>
-          <div><img class="h-12 w-auto" src="../img/2.png" alt=""></div>
-          <div><img class="h-12 w-auto" src="../img/3.png" alt=""></div>
-          <div><img class="h-12 w-auto" src="../img/4.png" alt=""></div>
+          <div><img class="h-12 w-auto" src="${lodge.images[0]}" alt=""></div>
+          <div><img class="h-12 w-auto" src="${lodge.images[1]}" alt=""></div>
+          <div><img class="h-12 w-auto" src="${lodge.images[2]}" alt=""></div>
+          <div><img class="h-12 w-auto" src="${lodge.images[3]}" alt=""></div>
       </div>
       <p class="text-3xl font-bold text-slate-800 uppercase">${lodge.name}</p>
       <p class="font-semibold p-1 text-slate-600">Location: ${lodge.location}</p>
