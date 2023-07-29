@@ -18,6 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const lodgeDetailsDiv = document.getElementById('lodgeDetails');
             // Populate the lodge details on the page
             lodgeDetailsDiv.innerHTML = generateLodgeDetailsHTML(lodge);
+            function changeMainImage(event) {
+      const mainImage = document.querySelector('.w-72');
+      mainImage.src = event.target.src;
+    }
+
+    const lodgeThumbnails = document.querySelectorAll('.lodge-thumbnail');
+    lodgeThumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener('click', changeMainImage);
+    });
         } catch (e) {
             console.error('Error fetching data:', e);
         }
@@ -27,12 +36,12 @@ function generateLodgeDetailsHTML(lodge) {
   return `
     <a href="lodges.html"><img src="../img/back.png" class="h-6 w-auto" alt="back"></a>
     <div>
-      <img class="w-32 h-auto p-2" src="${lodge.images[2]}" alt="">
+      <img class="w-72 h-auto p-2 items-center" src="${lodge.images[2]}" alt="">
       <div class="mt-4 mb-6 flex space-x-4">
-          <div><img class="h-12 w-auto" src="${lodge.images[0]}" alt=""></div>
-          <div><img class="h-12 w-auto" src="${lodge.images[1]}" alt=""></div>
-          <div><img class="h-12 w-auto" src="${lodge.images[2]}" alt=""></div>
-          <div><img class="h-12 w-auto" src="${lodge.images[3]}" alt=""></div>
+          <div><img class="lodge-thumbnail h-20 w-auto" src="${lodge.images[0]}" alt=""></div>
+          <div><img class="lodge-thumbnail h-20 w-auto" src="${lodge.images[1]}" alt=""></div>
+          <div><img class="lodge-thumbnail h-20 w-auto" src="${lodge.images[2]}" alt=""></div>
+          <div><img class="lodge-thumbnail h-20 w-auto" src="${lodge.images[3]}" alt=""></div>
       </div>
       <p class="text-3xl font-bold text-slate-800 uppercase">${lodge.name}</p>
       <p class="font-semibold p-1 text-slate-600">Location: ${lodge.location}</p>
@@ -40,14 +49,11 @@ function generateLodgeDetailsHTML(lodge) {
     <div class="absolute bottom-0 inset-x-0">
       <div class="flex space-x-10">
           <p class="font-semibold pl-4 text-4xl">#${lodge.amount}</p>
-          <p class="px-8 py-1 bg-green-900 rounded-md text-white text-2xl">Message</p>
+          <p class="px-8 py-1 bg-green-900 rounded-md text-white text-2xl"><a href="https://wa.me/2349039770569">Message</a></p>
       </div>
-      <button class="font-normal hover:bg-slate-800 text-2xl bg-gray-500 m-4 mt-2 text-white px-28 py-1 rounded-md">Book a visit</button>
+      <button class="font-normal hover:bg-slate-800 text-2xl bg-gray-500 m-4 mt-2 text-white px-28 py-1 rounded-md"><a href="https://wa.me/2349039770569">Book a visit</a></button>
     </div>
   `;
 }
-
-
-    // Call the function to fetch and display the specific lodge details
     fetchLodgeDetails();
 });
