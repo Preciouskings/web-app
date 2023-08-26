@@ -1,30 +1,5 @@
 const API_URL = 'https://home-ease.onrender.com/api/lodges'
 
-const navButton = document.getElementById('navbutton');
-const navbar = document.getElementById('sidenav');
-navButton.addEventListener('click', () => {
-  navbar.classList.toggle('hidden');
-});
-
-const imgsrcs = ['../img/1.png', '../img/2.png', '../img/3.png', '../img/4.png'];
-const img = document.getElementById('img');
-let currentIndex = 0;
-function createImageElement (src) {
-    const newimg = document.createElement('img');
-    newimg.setAttribute('src', src);
-    return newimg;
-}
-
-function updateImage() {
-    img.innerHTML = '';
-    const currentSrc = imgsrcs[currentIndex];
-    const newImage = createImageElement(currentSrc);
-    img.appendChild(newImage);
-    currentIndex = (currentIndex + 1) % imgsrcs.length;
-    setTimeout(updateImage, 2000); 
-}
-updateImage();
-
 function generateHTML(lodge) {
   return `
     <div class="flex">
@@ -47,25 +22,6 @@ function generateHTML(lodge) {
   `;
 }
 
-// async function fetchAllLodges() {
-//   try {
-//     const response = await fetch(API_URL);
-//     if (!response.ok) {
-//       throw new Error(`Failed to fetch: ${response.status}`);
-//     }
-//     const json = await response.json();
-//     const data = json.data.map(lodge => ({ id: lodge.id, name: lodge.name, amount: lodge.amount, location: lodge.location, images: lodge.images}));
-    
-//     const dataDisplayDiv = document.getElementById('lodgeDisplay');
-    
-//     data.forEach(lodge => {
-//     const lodgeHTML = generateHTML(lodge);
-//     dataDisplayDiv.innerHTML += lodgeHTML;
-//     });
-//   } catch (e) {
-//     console.error('Error fetching data:', e);
-//   }
-// }
 function fetchAllLodges() {
   return fetch(API_URL)
     .then((response) => {

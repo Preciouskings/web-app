@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Ease | Web</title>
+    <link href="../src/styles.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+    <a href="lodges.html"><img src="../img/back.png" class="h-6 w-auto mb-2" alt="back"></a>
+    <form action="https://home-ease.onrender.com/api/ecommerce" method="post">
+        <div class="h-40 w-auto mx-12 rounded-lg bg-slate-200 border border-green-800">
+            <div class="m-2">
+                <label class="font-normal text-sm text-gray-500 mb-4" for="images">Upload media of any of these formats (png., jpg.,
+                etc)</label>
+            <input type="file" name="images" id="images" placeholder="images">
+            </div>
+        </div>
+        <div class="mt-4">
+            <input class="focus:ring-1 focus:ring-green-800 focus:outline-none rounded-lg focus:border-green-800 p-2  h-10 w-full border border-slate-300" type="text" name="title" id="title" placeholder="Product name">
+        </div>
+        <div class="mt-4">
+            <input class="focus:ring-1 focus:ring-green-800 focus:outline-none rounded-lg focus:border-green-800 p-2  h-10 w-full border border-slate-300" type="text" name="description" id="description" placeholder="Description">
+        </div>
+        <div class="mt-4 flex space-x-3">
+            <input class="focus:ring-1 focus:ring-green-800 focus:outline-none rounded-lg focus:border-green-800 p-2  h-10 w-auto border border-slate-300" type="number" name="amount" id="amount" placeholder="Amount (N)">
+            <input class="focus:ring-1 focus:ring-green-800 focus:outline-none rounded-lg focus:border-green-800 p-2  h-10 w-24 border border-slate-300" type="number" name="quantity" id="quantity" placeholder="Quantity">
+        </div>
+        <div class="mt-4">
+            <input class="focus:ring-1 focus:ring-green-800 focus:outline-none rounded-lg focus:border-green-800 p-2  h-10 w-full border border-slate-300" type="text" name="location" id="location" placeholder="location">
+        </div>
+        <div>
+            <input class="absolute bottom-0 inset-x-0 bg-green-800 text-white h-12 m-4 rounded-lg font-semibold" type="submit" value="Submit">
+        </div>
+    </form>
+    <script defer src="../src/utils.js"></script>
+</body>
+</html>
+
