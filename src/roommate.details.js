@@ -48,7 +48,6 @@ function generateRoommateDetailsHTML(roommate) {
           <p class="font-semibold pl-4 text-4xl">#${roommate.amount}</p>
           <p class="px-8 py-1 bg-green-900 rounded-md text-white text-2xl"><a href="https://wa.me/2349039770569">Message</a></p>
       </div>
-      <button class="font-normal hover:bg-slate-800 text-2xl bg-gray-500 m-4 mt-2 text-white px-28 py-1 rounded-md"><a href="https://wa.me/2349039770569">Book a visit</a></button>
     </div>
   `;
 }

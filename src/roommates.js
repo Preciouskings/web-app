@@ -70,7 +70,7 @@ function searchRoommate(query) {
 //document.addEventListener('DOMContentLoaded', fetchAllroommates);
 document.addEventListener('DOMContentLoaded', () => {
   fetchAllRoommates().then((roommates) => {
-    const dataDisplayDiv = document.getElementById('roommatesDisplay');
+    const dataDisplayDiv = document.getElementById('roommateDisplay');
     roommates.forEach((roommate) => {
       const roommateHTML = generateHTML(roommate);
       dataDisplayDiv.innerHTML += roommateHTML;
