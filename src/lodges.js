@@ -7,7 +7,7 @@ function generateHTML(lodge) {
       <div>
         <p class="font-semibold">${lodge.name}</p>
         <div>
-          <p class="text-gray-400 font-medium text-xs">Location: ${lodge.location}</p>
+          <p class="text-gray-400 font-medium text-xs">Location: ${lodge.school}</p>
         </div>
       </div>
       <span class="pl-14 text-green-900 font-semibold">#${lodge.amount}</span>
@@ -37,6 +37,7 @@ function fetchAllLodges() {
         amount: lodge.amount,
         location: lodge.location,
         images: lodge.images,
+        school: lodge.school,
       }));
     });
 }

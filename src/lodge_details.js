@@ -44,6 +44,7 @@ function generateLodgeDetailsHTML(lodge) {
           <div><img class="lodge-thumbnail h-20 w-auto" src="${lodge.images[3]}" alt=""></div>
       </div>
       <p class="text-3xl font-bold text-slate-800 uppercase">${lodge.name}</p>
+      <p class="font-semibold p-1 text-slate-600">Location: ${lodge.school}</p>
       <p class="font-semibold p-1 text-slate-600">Location: ${lodge.location}</p>
     </div>
     <div class="absolute bottom-0 inset-x-0">
