@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Ease | Web</title>
+    <link href="../src/styles.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+    <div>
+        <a href="lodges.html"><img src="../img/back.png" class="h-6 w-auto" alt="back"></a>
+        <h3>Sign in</h3>
+        <p>Welcome back, Please enter your details.</p>
+        <form action="https://home-ease.onrender.com/api/auth/login" id="registrationForm">
+            <div class="mt-4">
+                <input
+                    class="focus:ring-1 focus:ring-green-800 focus:outline-none rounded-lg focus:border-green-800 p-2  h-10 w-full border border-slate-300"
+                    type="text" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="mt-4">
+                <input
+                    class="focus:ring-1 focus:ring-green-800 focus:outline-none rounded-lg focus:border-green-800 p-2  h-10 w-full border border-slate-300"
+                    type="text" name="password" id="password" placeholder="Password">
+            </div>
+            <p>Forgot Password?</p>
+            <div class="mt-4">
+                <input class="p-2 w-full bg-green-800 text-white h-12 rounded-lg font-semibold" type="submit"
+                    value="Sign in">
+            </div>
+            <div>
+                <p class="absolute bottom-0 inset-x-0 text-slate-500 font-semibold">Don't have an account? Sign up</p>
+            </div>
+        </form>
+    </div>
+    <script defer src="../src/utils.js"></script>
+    <script defer src="../src/register.js"></script>
+</body>
+
+</html>
