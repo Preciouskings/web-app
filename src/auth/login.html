@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Ease | Web</title>
-    <link href="../src/styles.css" rel="stylesheet">
+    <link href="../../src/styles.css" rel="stylesheet">
 </head>
 
 <body class="p-4">
     <div>
-        <a href="lodges.html"><img src="../img/back.png" class="h-6 w-auto" alt="back"></a>
+        <a href="lodges.html"><img src="../../img/back.png" class="h-6 w-auto" alt="back"></a>
         <h3>Sign in</h3>
         <p>Welcome back, Please enter your details.</p>
-        <form action="https://home-ease.onrender.com/api/auth/login" id="registrationForm">
+        <form action="https://api.homeease.ng/api/auth/login" id="loginForm">
             <div class="mt-4">
                 <input
                     class="focus:ring-1 focus:ring-green-800 focus:outline-none rounded-lg focus:border-green-800 p-2  h-10 w-full border border-slate-300"
@@ -34,8 +34,7 @@
             </div>
         </form>
     </div>
-    <script defer src="../src/utils.js"></script>
-    <script defer src="../src/register.js"></script>
+    <script defer src="../auth/login.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+const API_URL = 'https://api.homeease.ng/api/auth/register'
+
 document.getElementById("registrationForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -8,7 +10,7 @@ document.getElementById("registrationForm").addEventListener("submit", function 
   });
 
   // Make a POST request to the registration endpoint
-  fetch("/registration-endpoint", {
+  fetch(API_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -34,5 +36,5 @@ document.getElementById("registrationForm").addEventListener("submit", function 
       console.error("Registration error:", error);
       // You can display an error message to the user here
     });
-    window.location.href = '/login.html';
+    // window.location.href = '/login.html';
 });

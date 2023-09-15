@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Ease | Web</title>
-    <link href="../src/styles.css" rel="stylesheet">
+    <link href="../../src/styles.css" rel="stylesheet">
 </head>
 
 <body class="p-4">
-    <a href="roommates.html"><img src="../img/back.png" class="h-6 w-auto mb-2" alt="back"></a>
-    <form action="https://home-ease.onrender.com/api/roommate" method="post">
+    <a href="roommates.html"><img src="../../img/back.png" class="h-6 w-auto mb-2" alt="back"></a>
+    <form id="roommateForm">
         <div class="h-40 w-auto mx-12 rounded-lg bg-slate-200 border border-green-800">
             <div class="m-2">
                 <label class="font-normal text-sm text-gray-500 mb-4" for="images">Upload media of any of these formats
@@ -47,7 +47,8 @@
                 type="submit" value="Submit">
         </div>
     </form>
-    <script defer src="../src/utils.js"></script>
+    <!-- <script defer src="../utils.js"></script> -->
+    <script defer src="../roommate/add.roommate.js"></script>
 </body>
 
 </html>

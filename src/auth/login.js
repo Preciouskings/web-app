@@ -1,4 +1,4 @@
-const API_URL = "https://home-ease.onrender.com/api/auth/login";
+const API_URL = "https://api.homeease.ng/api/auth/login";
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -25,7 +25,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         // Login failed, handle errors
         throw new Error("Login failed.");
       }
-    })
+    }, 2000)
     .then((data) => {
       // Handle the response data, which should include access and refresh tokens
       const { accessToken, refreshToken } = data;
@@ -37,7 +37,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       localStorage.setItem("accessToken", accessToken);
 
       // Redirect to a protected page or show a success message
-      window.location.href = "/lodges.html";
+      // window.location.href = "/lodges.html";
     })
     .catch((error) => {
       // Handle and display login errors, e.g., show an error message
@@ -45,3 +45,5 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       // You can display an error message to the user here
     });
 });
+
+window.location.href = "file:///C:/Users/zubye/Documents/Everything%20homeease/web-app/src/lodges/lodges.html";

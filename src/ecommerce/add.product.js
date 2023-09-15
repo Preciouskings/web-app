@@ -1,7 +1,7 @@
-const API_URL = 'https://api.homeease.ng/api/roommates'
+const API_URL = 'https://api.homeease.ng/api/ecommerce'
 
 // Retrieve the access token from storage
-document.getElementById("roommateForm").addEventListener("submit", function (e) {
+document.getElementById("productForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   // Retrieve the access token from local storage
@@ -28,7 +28,7 @@ document.getElementById("roommateForm").addEventListener("submit", function (e) 
   };
 
   // Make a POST request with the form data and headers
-  fetch("https://api.homeease.ng/api/roommates", {
+  fetch("https://api.homeease.ng/api/ecommerce", {
     method: "POST",
     headers,
     body: JSON.stringify(userData),
