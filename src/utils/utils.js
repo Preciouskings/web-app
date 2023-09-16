@@ -4,7 +4,7 @@ navButton.addEventListener('click', () => {
   navbar.classList.toggle('hidden');
 });
 
-const imgsrcs = ['../img/1.png', '../img/2.png', '../img/3.png', '../img/4.png'];
+const imgsrcs = ['../../img/1.png', '../../img/2.png', '../../img/3.png', '../../img/4.png'];
 const img = document.getElementById('img');
 let currentIndex = 0;
 function createImageElement (src) {
@@ -22,3 +22,12 @@ function updateImage() {
     setTimeout(updateImage, 2000); 
 }
 updateImage();
+
+function loadFooter() {
+    fetch('../../src/utils/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footerContainer').innerHTML = data;
+        });
+}
+loadFooter();

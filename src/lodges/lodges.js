@@ -5,9 +5,9 @@ function generateHTML(lodge) {
     <div class="flex">
       <img src="${lodge.images[0]}" class="h-24 pt-2 w-20" alt="">
       <div>
-        <p class="font-semibold">${lodge.name}</p>
+        <p class="font-semibold pl-4">${lodge.name}</p>
         <div>
-          <p class="text-gray-400 font-medium text-xs">Location: ${lodge.school}</p>
+          <p class="text-gray-400 pl-4 font-medium text-xs">Location: ${lodge.school}</p>
         </div>
       </div>
       <span class="pl-14 text-green-900 font-semibold">#${lodge.amount}</span>
@@ -15,9 +15,9 @@ function generateHTML(lodge) {
     <div class="mt-2 flex">
       <button class="bg-gray-300 p-1 px-10 rounded-sm" onclick="handleDetailsClick('${lodge.id}')">Details</button>
     <div class="bg-green-900 p-1 rounded-sm order-last">
-        <img src="../img/chat.png" class="w-6 h-auto" alt="">
+        <img src="../../img/chat.png" class="w-6 h-auto" alt="">
       </div>
-      <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm"><a href="https://wa.me/2349039770569">Message</a></p>
+      <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm"><a href="tel:${lodge.caretakerPhoneNumber}">Message</a></p>
     </div>
   `;
 }
@@ -38,6 +38,7 @@ function fetchAllLodges() {
         location: lodge.location,
         images: lodge.images,
         school: lodge.school,
+        caretakerPhoneNumber: lodge.caretakerPhoneNumber,
       }));
     });
 }
