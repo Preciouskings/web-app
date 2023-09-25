@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // roommate_details.js
 function generateRoommateDetailsHTML(roommate) {
   return `
-    <a href="roommates.html"><img src="../img/back.png" class="h-6 w-auto" alt="back"></a>
+    <a href="roommates.html"><img src="../../img/back.png" class="h-6 w-auto" alt="back"></a>
     <div>
       <img class="w-72 h-auto p-2 items-center" src="${roommate.profilePhoto}" alt="">
       <p class="text-3xl font-bold text-slate-800 uppercase">${roommate.name}</p>
@@ -43,10 +43,10 @@ function generateRoommateDetailsHTML(roommate) {
       <p class="font-semibold p-1 text-slate-600">Phone Number: ${roommate.phoneNumber}</p>
       <p class="font-semibold p-1 text-slate-600">Gender: ${roommate.gender}</p>
     </div>
-    <div class="absolute bottom-0 inset-x-0">
+    <div class="absolute bottom-0 inset-x-0 p-4">
       <div class="flex space-x-10">
           <p class="font-semibold pl-4 text-4xl">#${roommate.amount}</p>
-          <p class="px-8 py-1 bg-green-900 rounded-md text-white text-2xl"><a href="https://wa.me/2349039770569">Message</a></p>
+          <p class="px-8 py-1 bg-green-900 rounded-md text-white text-2xl"><a href="https://wa.me/${roommate.phoneNumber}">Message</a></p>
       </div>
     </div>
   `;

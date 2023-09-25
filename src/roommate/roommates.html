@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Ease | Web</title>
-    <link href="../src/styles.css" rel="stylesheet">
+    <link href="../../src/styles.css" rel="stylesheet">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 <body>
     <div class="relative">
 
         <section class="m-5 flex space-x-4">
-            <div class="flex-none"><img id="navbutton" src="../img/profile.png" alt="icon"></div>
+            <div class="flex-none"><img id="navbutton" src="../../img/profile.png" alt="icon"></div>
             <div class="grow"><input
                     class="p-4 placeholder:text-slate-400 block bg-white w-11/12 border border-slate-300 rounded-md py-2 focus:ring-sky-400 focus:outline-none focus:border-sky-400 focus:ring-1"
                     name="search" placeholder="Search School" type="search" id="searchInput"></div>
@@ -32,9 +32,9 @@
             </div>
         </div>
         <div class="m-4" id="img"></div>
-        <div class="flex space-x-24">
+        <div class="flex">
             <p class="text-green-900 font-bold m-4">Choose a roommate</p>
-            <a href="../src/add.roommate.html"><img src="../img/PlusCircle.png" class="w-10 h-10" alt=""></a>
+            <a href="../roommate/add.roommate.html"><img src="../../img/PlusCircle.png" class="mt-2 w-10 h-10" alt=""></a>
         </div>
         <div id="section" class="p-4 pt-0">
             <div class="" id="roommateDisplay"></div>
@@ -42,10 +42,10 @@
     </div>
     <footer class="absolute bottom-0 inset-x-0 bg-slate-100">
         <div class="flex space-x-16 ml-4">
-            <a href="../src/lodges.html"><img src="../img/home2.png" class="h-9 w-auto" alt=""></a>
-            <a href="../src/ecommerce.html"><img src="../img/ecom2.png" class="h-9 w-auto" alt=""></a>
-            <a href="../src/roommates.html"><img src="../img/mate2.png" class="h-9 w-auto" alt=""></a>
-            <img src="../img/faqs.png" class="h-9 w-auto" alt="">
+            <a href="../../src/lodges/lodges.html"><img src="../../img/home2.png" class="h-9 w-auto" alt=""></a>
+            <a href="../../src/ecommerce/ecommerce.html"><img src="../../img/ecom2.png" class="h-9 w-auto" alt=""></a>
+            <a href="../../src/roommate/roommates.html"><img src="../../img/mate2.png" class="h-9 w-auto" alt=""></a>
+            <a href="../../src/info/blogs.html"><img src="../../img/faqs.png" class="h-9 w-auto" alt=""></a>
         </div>
         <div class="flex space-x-6 ml-4 mb-2">
             <p class="font-semibold text-gray-500">Lodges</p>
@@ -55,8 +55,8 @@
         </div>
     </footer>
 </body>
-<script defer src="../src/utils.js"></script>
-<script defer src="../src/roommates.js"></script>
+<script defer src="../../src/utils/utils.js"></script>
+<script defer src="../roommate/roommates.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.7.0/qs.min.js"></script>
 
 </html>

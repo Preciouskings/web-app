@@ -5,9 +5,9 @@ function generateHTML(roommate) {
     <div class="flex">
       <img src="${roommate.profilePhoto}" class="h-24 pt-2 w-20" alt="">
       <div>
-        <p class="font-semibold">${roommate.name}</p>
+        <p class="font-semibold pl-4">${roommate.name}</p>
         <div>
-          <p class="text-gray-400 font-medium text-xs">${roommate.department}</p>
+          <p class="text-gray-400 pl-4 font-medium text-xs">${roommate.department}</p>
         </div>
       </div>
       <span class="pl-14 text-green-900 font-semibold">#${roommate.level}</span>
@@ -15,7 +15,7 @@ function generateHTML(roommate) {
     <div class="mt-2 flex">
       <button class="bg-gray-300 p-1 px-10 rounded-sm" onclick="handleDetailsClick('${roommate.id}')">Details</button>
     <div class="bg-green-900 p-1 rounded-sm order-last">
-        <img src="../img/chat.png" class="w-6 h-auto" alt="">
+        <img src="../../img/chat.png" class="w-6 h-auto" alt="">
       </div>
       <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm"><a href="https://wa.me/${roommate.phoneNumber} ">Message</a></p>
     </div>
