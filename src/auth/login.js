@@ -1,4 +1,6 @@
 const API_URL = "https://api.homeease.ng/api/auth/login";
+const modal = document.getElementById("myModal");
+const alertMessage = document.getElementById("alertMessage");
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -21,29 +23,45 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       if (response.ok) {
         // Login was successful, parse the response JSON
         return response.json();
+      } else if (response.status === 400 || 401) {
+        // Invalid credentials, show an alert
+        showModal("Invalid Credentials");
+        return Promise.reject("Invalid Credentials");
       } else {
-        // Login failed, handle errors
-        throw new Error("Login failed.");
+        // Other errors, show a generic alert
+        showModal("Check Connection and Try again");
+        return Promise.reject("Check Connection and Try again");
       }
-    }, 2000)
+    })
     .then((data) => {
       // Handle the response data, which should include access and refresh tokens
       const { accessToken, refreshToken } = data;
       console.log("Access Token:", accessToken);
       console.log("Refresh Token:", refreshToken);
 
-      // You can store the tokens securely, e.g., in localStorage or a secure HTTP cookie
       // Storing the access token
       localStorage.setItem("accessToken", accessToken);
 
-      // Redirect to a protected page or show a success message
-      // window.location.href = "/lodges.html";
+      // Show a "Login Success" alert for 2 seconds
+      showModal("Login Success");
+      setTimeout(() => {
+        // Redirect to the "lodges.html" page
+        window.location.href = "../lodges/lodges.html";
+      }, 2000);
     })
     .catch((error) => {
       // Handle and display login errors, e.g., show an error message
       console.error("Login error:", error);
-      // You can display an error message to the user here
     });
 });
 
-window.location.href = "file:///C:/Users/zubye/Documents/Everything%20homeease/web-app/src/lodges/lodges.html";
+// Function to show the modal with a custom message
+function showModal(message) {
+  alertMessage.innerText = message;
+  modal.style.display = "block";
+}
+
+// Close the modal when the user clicks the "x" button
+document.querySelector(".close").addEventListener("click", function () {
+  modal.style.display = "none";
+});

@@ -7,32 +7,31 @@
     <link href="../../src/styles.css" rel="stylesheet">
     <style>
         /* Add the CSS code for centering content here */
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 320px) {
             .centered-content {
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                height: 100%;
-                max-width: 360px;
-                /* Adjust as needed */
-                width: 100%;
+                align-items: flex-start;
+                height: 100vh;
+                /* Center vertically in the viewport */
             }
         }
     </style>
 </head>
-<body class="centered-content mx-auto">
+<body class="overflow-y-auto">
+        <div class="centered-content">
     <div class="relative">
     
-    <section class="m-5 flex space-x-4">
+    <section class="ml-4 mt-4 flex space-x-4">
         <div class="flex-none"><img id="navbutton" src="../../img/profile.png" alt="icon"></div>
         <div class="grow"><input
-            class="p-4 placeholder:text-slate-400 block bg-white w-11/12 border border-slate-300 rounded-md py-2 focus:ring-sky-400 focus:outline-none focus:border-sky-400 focus:ring-1"
+            class="p-4 placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 focus:ring-sky-400 focus:outline-none focus:border-sky-400 focus:ring-1"
             name="search" placeholder="Search School" type="search" id="searchInput"></div>
     </section>
     <!-- Side bar -->
     <div id="sidenav" class="hidden relative">
         <div class="absolute inset-y-0 left-2">
-            <div class="w-full h-48 bg-slate-200">
+            <div class="w-full h-full bg-slate-200">
                 <p class="p-1 text-center hover:bg-green-800"><a href="https://homeease.ng">Go home</a></p>
                 <p class="p-1 hover:bg-green-800"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeSqkgnYyFgyBLSmQEHAPMZjFM0kKUXEPsb8IGcWRBVtdfYkg/viewform">Become an Ambassador</a></p>
                 <p class="p-1 text-center hover:bg-green-800"><a href="https://wa.link/b05eo7">Contact Admin</a></p>
@@ -53,7 +52,7 @@
     </div>
     
     <div id="footerContainer"></div>
-    <footer class="absolute bottom-0 inset-x-0 bg-slate-100">
+    <footer class="absolute bottom-0 bg-slate-100">
         <div class="flex space-x-16 ml-4">
             <a href="../../src/lodges/lodges.html"><img src="../../img/home2.png" class="h-9 w-auto" alt=""></a>
             <a href="../../src/ecommerce/ecommerce.html"><img src="../../img/ecom2.png" class="h-9 w-auto" alt=""></a>
@@ -67,6 +66,7 @@
             <p class="font-semibold text-gray-500">Info</p>
         </div>
     </footer>
+        </div>
 </body>
 <script defer src="../../src/utils/utils.js"></script>
 <script defer src="../lodges/lodges.js"></script>

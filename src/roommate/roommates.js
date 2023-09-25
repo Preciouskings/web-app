@@ -1,9 +1,9 @@
-const API_URL = 'https://home-ease.onrender.com/api/roommates'
+const API_URL = 'https://api.homeease.ng/api/roommates'
 
 function generateHTML(roommate) {
   return `
     <div class="flex">
-      <img src="${roommate.profilePhoto}" class="h-24 pt-2 w-20" alt="">
+      <img src="${roommate.image}" class="h-24 pt-2 w-20" alt="">
       <div>
         <p class="font-semibold pl-4">${roommate.name}</p>
         <div>
@@ -17,7 +17,7 @@ function generateHTML(roommate) {
     <div class="bg-green-900 p-1 rounded-sm order-last">
         <img src="../../img/chat.png" class="w-6 h-auto" alt="">
       </div>
-      <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm"><a href="https://wa.me/${roommate.phoneNumber} ">Message</a></p>
+      <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm"><a href="https://wa.me/${roommate.phone_number} ">Message</a></p>
     </div>
   `;
 }
@@ -36,7 +36,7 @@ function fetchAllRoommates() {
         name: roommate.name,
         department: roommate.department,
         level: roommate.level,
-        profilePhoto: roommate.profilePhoto,
+        profilePhoto: roommate.image,
       }));
     });
 }

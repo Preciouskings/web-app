@@ -19,7 +19,7 @@ function updateImage() {
     const newImage = createImageElement(currentSrc);
     img.appendChild(newImage);
     currentIndex = (currentIndex + 1) % imgsrcs.length;
-    setTimeout(updateImage, 2000); 
+    setTimeout(updateImage, 5000); 
 }
 updateImage();
 
