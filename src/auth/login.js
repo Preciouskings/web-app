@@ -1,4 +1,4 @@
-const API_URL = "https://api.homeease.ng/api/auth/login";
+const API_URL = "https://home-ease.onrender.com/api/auth/login";
 const modal = document.getElementById("myModal");
 const alertMessage = document.getElementById("alertMessage");
 

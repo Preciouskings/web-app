@@ -1,4 +1,4 @@
-const API_URL = 'https://api.homeease.ng/api/lodges'
+const API_URL = 'https://home-ease.onrender.com/api/lodges'
 
 // Retrieve the access token from storage
 document.getElementById("lodgeForm").addEventListener("submit", function (e) {
@@ -10,7 +10,7 @@ document.getElementById("lodgeForm").addEventListener("submit", function (e) {
   // Check if the access token is available
   if (!accessToken) {
     // Handle the case where the access token is not available (e.g., user needs to log in)
-    console.error("Access token not found. Please log in.");
+    window.location.href = "../../auth/login.html";
     return;
   }
 
@@ -28,7 +28,7 @@ document.getElementById("lodgeForm").addEventListener("submit", function (e) {
   };
 
   // Make a POST request with the form data and headers
-  fetch("https://api.homeease.ng/api/lodges", {
+  fetch(API_URL, {
     method: "POST",
     headers,
     body: JSON.stringify(userData),
@@ -37,6 +37,7 @@ document.getElementById("lodgeForm").addEventListener("submit", function (e) {
       if (response.ok) {
         // Handle a successful response (e.g., redirect or show a success message)
         console.log("Data submitted successfully:", response);
+        window.location.href = "../../src/lodges/lodges.html";
         // You can redirect the user to another page or display a success message here
       } else {
         // Handle errors (e.g., validation errors or server errors)
