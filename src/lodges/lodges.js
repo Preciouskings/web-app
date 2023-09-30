@@ -1,9 +1,9 @@
-const API_URL = 'https://home-ease.onrender.com/api/lodges'
+const API_URL = 'https://api.homeease.ng/api/lodges'
 
 function generateHTML(lodge) {
   return `
     <div class="flex">
-      <img src="${lodge.images[0]}" class="h-24 pt-2 w-20" alt="">
+      <img src="${lodge.image_urls[0]}" class="h-24 pt-2 w-20" alt="">
       <div>
         <p class="font-semibold pl-4">${lodge.name}</p>
         <div>
@@ -17,7 +17,7 @@ function generateHTML(lodge) {
     <div class="bg-green-900 p-1 rounded-sm order-last">
         <img src="../../img/chat.png" class="w-6 h-auto" alt="">
       </div>
-      <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm"><a href="tel:${lodge.caretakerPhoneNumber}">Message</a></p>
+      <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm"><a href="tel:${lodge.caretaker_phonenumber}">Message</a></p>
     </div>
   `;
 }
@@ -36,9 +36,9 @@ function fetchAllLodges() {
         name: lodge.name,
         amount: lodge.amount,
         location: lodge.location,
-        images: lodge.images,
+        image_urls: lodge.image_urls,
         school: lodge.school,
-        caretakerPhoneNumber: lodge.caretakerPhoneNumber,
+        caretaker_phone_number: lodge.caretaker_phonenumber,
       }));
     });
 }
