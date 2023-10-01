@@ -28,7 +28,7 @@ document.getElementById("roommateForm").addEventListener("submit", function (e) 
   };
 
   // Make a POST request with the form data and headers
-  fetch("https://api.homeease.ng/api/roommates", {
+  fetch(API_URL, {
     method: "POST",
     headers,
     body: JSON.stringify(userData),

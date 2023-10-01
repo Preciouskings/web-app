@@ -36,7 +36,7 @@ function generateLodgeDetailsHTML(lodge) {
   return `
     <a href="lodges.html"><img src="../../img/back.png" class="h-6 w-auto" alt="back"></a>
     <div>
-      <img class="w-72 h-auto p-2 items-center" src="${lodge.image_urls[2]}" alt="">
+      <img class="w-72 h-48 p-2 items-center" src="${lodge.image_urls[0]}" alt="">
       <div class="mt-4 mb-6 flex space-x-4">
           <div><img class="lodge-thumbnail h-20 w-auto" src="${lodge.image_urls[0]}" alt=""></div>
           <div><img class="lodge-thumbnail h-20 w-auto" src="${lodge.image_urls[1]}" alt=""></div>
@@ -47,12 +47,12 @@ function generateLodgeDetailsHTML(lodge) {
       <p class="font-semibold p-1 text-slate-600">School: ${lodge.school}</p>
       <p class="font-semibold p-1 text-slate-600">Location: ${lodge.location}</p>
     </div>
-    <div class="absolute bottom-0 inset-x-0">
-      <div class="flex space-x-10">
-          <p class="font-semibold pl-4 text-4xl">#${lodge.amount}</p>
-          <p class="px-8 py-1 bg-green-900 rounded-md text-white text-2xl"><a href="https://wa.me/+234${lodge.caretaker_phonenumber}">Check Availability</a></p>
+    <div class="absolute bottom-0">
+      <div class="flex space-x-8">
+          <p class="font-semibold pl-4 text-3xl">#${lodge.amount}</p>
+          <p class="px-1 text-center p-1 bg-green-900 rounded-md text-white text-1xl"><a href="tel:${lodge.caretaker_phonenumber}">Check Availability</a></p>
       </div>
-      <button class="font-normal hover:bg-slate-800 text-2xl bg-gray-500 m-4 mt-2 text-white px-28 py-1 rounded-md"><a href="https://wa.me/2349039770569">Book a visit</a></button>
+      <button class="font-normal hover:bg-slate-800 text-2xl bg-gray-500 m-4 mt-2 text-white px-20 py-1 rounded-md"><a href="https://wa.me/2349039770569">Book a visit</a></button>
     </div>
   `;
 }

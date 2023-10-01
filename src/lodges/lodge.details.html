@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Ease | Web</title>
     <link href="../../src/styles.css" rel="stylesheet">
+    <link rel="icon" href="../../img/favicon.ico">
+    <style>
+        /* Add the CSS code for centering content here */
+        @media screen and (min-width: 350px) {
+            .centered-content {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                height: 100vh;
+                /* Center vertically in the viewport */
+            }
+        }
+    </style>
 </head>
-<body class="p-4">
+<body class="centered-content mr-4">
     <div id="lodgeDetails">
     </div>
     <script defer src="../../src/utils/utils.js"></script>

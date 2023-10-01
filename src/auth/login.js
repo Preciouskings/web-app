@@ -1,4 +1,4 @@
-const API_URL = "https://home-ease.onrender.com/api/auth/login";
+const API_URL = "https://api.homeease.ng/api/auth/login";
 const modal = document.getElementById("myModal");
 const alertMessage = document.getElementById("alertMessage");
 
@@ -46,7 +46,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       showModal("Login Success");
       setTimeout(() => {
         // Redirect to the "lodges.html" page
-        window.location.href = "../lodges/lodges.html";
+        return;
       }, 2000);
     })
     .catch((error) => {
