@@ -1,4 +1,6 @@
 const API_URL = 'https://api.homeease.ng/api/auth/register'
+const modal = document.getElementById("myModal");
+const alertMessage = document.getElementById("alertMessage");
 
 document.getElementById("registrationForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -23,18 +25,30 @@ document.getElementById("registrationForm").addEventListener("submit", function 
         return response.json();
       } else {
         // Registration failed, handle errors
+        showModal("Check Credentials");
         throw new Error("Registration failed.");
       }
     })
     .then((data) => {
       // Handle the response data, e.g., show a success message or redirect to login
       console.log("Registration successful:", data);
-      // You can redirect the user to a login page or show a success message here
+      showModal("Registration Success");
+      setTimeout(() => {
+        window.location.href = "../../src/auth/login.html";
+      }, 2000);
     })
     .catch((error) => {
       // Handle and display errors, e.g., show an error message
       console.error("Registration error:", error);
       // You can display an error message to the user here
     });
-    // window.location.href = '/login.html';
+});
+
+function showModal(message) {
+  alertMessage.innerText = message;
+  modal.style.display = "block";
+  }
+// Close the modal when the user clicks the "x" button
+document.querySelector(".close").addEventListener("click", function () {
+modal.style.display = "none";
 });

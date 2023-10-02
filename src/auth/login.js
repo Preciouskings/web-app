@@ -46,7 +46,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       showModal("Login Success");
       setTimeout(() => {
         // Redirect to the "lodges.html" page
-        return;
+        window.location.href = "../../src/lodges/lodges.html";
       }, 2000);
     })
     .catch((error) => {

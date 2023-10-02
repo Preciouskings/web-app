@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Ease | Web</title>
-    <link href="../src/styles.css" rel="stylesheet">
+    <link href="../../src/styles.css" rel="stylesheet">
     <link rel="icon" href="../../img/favicon.ico">
     <style>
         /* Add the CSS code for centering content here */
@@ -25,7 +25,7 @@
     <div class="centered-content">
         <div class="relative">
             <section class="ml-4 mt-4 flex space-x-4">
-                <div class="flex-none"><img id="navbutton" src="../img/profile.png" alt="icon"></div>
+                <div class="flex-none"><img id="navbutton" src="../../img/profile.png" alt="icon"></div>
                 <div class="grow"><input
                         class="p-4 placeholder:text-slate-400 block bg-white w-11/12 border border-slate-300 rounded-md py-2 focus:ring-sky-400 focus:outline-none focus:border-sky-400 focus:ring-1"
                         name="search" placeholder="Search Product" type="text" id="searchInput"></div>
@@ -33,15 +33,19 @@
             <!-- Side bar -->
             <div id="sidenav" class="hidden relative">
                 <div class="absolute inset-y-0 left-2">
-                    <div class="w-full h-full bg-slate-200">
-                        <p class="p-1 text-center hover:bg-green-800"><a href="https://homeease.ng">Go home</a></p>
-                        <p class="p-1 hover:bg-green-800"><a
+                    <div class="w-full h-full">
+                        <p class="p-1 text-center bg-slate-200 hover:bg-green-800"><a href="https://homeease.ng">Go home</a></p>
+                        <p class="p-1 hover:bg-green-800 bg-slate-200"><a
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSeSqkgnYyFgyBLSmQEHAPMZjFM0kKUXEPsb8IGcWRBVtdfYkg/viewform">Become
                                 an Ambassador</a></p>
-                        <p class="p-1 text-center hover:bg-green-800"><a href="https://wa.link/b05eo7">Contact Admin</a></p>
-                        <p class="p-1 text-center hover:bg-green-800"><a href="https://wa.me/2349039770569">Become an Agent</a></p>
-                        <p class="p-1 text-center hover:bg-green-800"><a href="../../src/auth/register.html">Sign up</a></p>
-                        <p class="p-1 text-center hover:bg-green-800"><a href="../../src/auth/login.html">Log in</a></p>
+                        <p class="p-1 text-center bg-slate-200 hover:bg-green-800"><a href="https://wa.link/b05eo7">Contact
+                                Admin</a></p>
+                        <p class="p-1 text-center bg-slate-200 hover:bg-green-800"><a href="https://wa.me/2349039770569">Become an
+                                Agent</a></p>
+                        <p class="p-1 text-center bg-slate-200 hover:bg-green-800"><a href="../../src/auth/register.html">Sign
+                                up</a></p>
+                        <p class="p-1 text-center bg-slate-200 hover:bg-green-800"><a href="../../src/auth/login.html">Log in</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -49,28 +53,28 @@
             
             <div class="flex">
                 <p class="text-green-900 font-bold m-4">Ecommerce</p>
-                <a href="../src/ecommerce/add.product.html"><img src="../img/PlusCircle.png" class="mt-2 w-10 h-10" alt=""></a>
+                <a href="../ecommerce/add.product.html"><img src="../../img/PlusCircle.png" class="mt-2 w-10 h-10" alt=""></a>
             </div>
             <div id="section" class="p-4 pt-0">
                 <div class="overflow-auto" id="productDisplay"></div>
             </div>
         </div> 
-        <footer class="fixed bottom-0 inset-x-0 bg-white">
-            <div class="flex space-x-16 ml-4">
-                <a href="../src/lodges.html"><img src="../img/home2.png" class="h-9 w-auto" alt=""></a>
-                <a href="../src/ecommerce.html"><img src="../img/ecom2.png" class="h-9 w-auto" alt=""></a>
-                <a href="../src/roommates.html"><img src="../img/mate2.png" class="h-9 w-auto" alt=""></a>
-                <img src="../img/faqs.png"  class="h-9 w-auto" alt="">
+        <footer class="fixed bottom-0 bg-white">
+            <div class="flex space-x-16 ml-3 py-2">
+                <a href="../../src/lodges/lodges.html"><img src="../../img/home2.png" class="h-9 w-auto" alt=""></a>
+                <a href="../../src/ecommerce/ecommerce.html"><img src="../../img/ecom2.png" class="h-9 w-auto" alt=""></a>
+                <a href="../../src/roommate/roommates.html"><img src="../../img/mate2.png" class="h-9 w-auto" alt=""></a>
+                <a href="../../src/info/blogs.html"><img src="../../img/faqs.png" class="h-9 w-auto" alt=""></a>
             </div>
-            <div class="flex space-x-6 ml-4 mb-2">
+            <!-- <div class="flex space-x-6 ml-4 mb-2">
                 <p class="font-semibold text-gray-500">Lodges</p>
                 <p class="font-semibold text-gray-500">Marketplace</p>
                 <p class="font-semibold text-gray-500">Roommates</p>
                 <p class="font-semibold text-gray-500">Info</p>
-            </div>
+            </div> -->
         </footer>
     </div>
 </body>
-<script defer src="../src/utils.js"></script>
-<script defer src="../src/ecommerce.js"></script>
+<script defer src="../utils/utils.js"></script>
+<script defer src="../ecommerce/ecommerce.js"></script>
 </html>

@@ -4,15 +4,53 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/favicon.ico">
     <title>Home Ease | Web</title>
     <link href="../../src/styles.css" rel="stylesheet">
 </head>
+<style>
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 
+    .modal-content {
+        background-color: white;
+        margin: 15% auto;
+        padding: 20px;
+        border: 0px solid #888;
+        border-radius: 2px;
+        width: 50%;
+        text-align: center;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
 <body class="p-4">
     <div>
-    <a href="lodges.html"><img src="../../img/back.png" class="h-6 w-auto" alt="back"></a>
-    <h3>Create Account</h3>
-    <p>Enter your details to create account with Home Ease</p>
+    <a href="../lodges/lodges.html"><img src="../../img/back.png" class="h-6 w-auto" alt="back"></a>
+    <h3 class="p-1">Create Account</h3>
+    <p class="p-1">Enter your details to create account with Home Ease</p>
         <form action="https://api.homeease.ng/api/auth/login" id="registrationForm">
             <div class="mt-4">
                 <input
@@ -29,15 +67,21 @@
                     class="focus:ring-1 focus:ring-green-800 focus:outline-none rounded-lg focus:border-green-800 p-2  h-10 w-full border border-slate-300"
                     type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
             </div>
-            <p>By clicking Register, you agree with our Terms and Conditions & Privacy Policy</p>
+            <p class="p-1">By clicking Register, you agree with our Terms and Conditions & Privacy Policy</p>
             <div class="mt-4">
                 <input class="p-2 w-full bg-green-800 text-white h-12 rounded-lg font-semibold" type="submit"
                     value="Register">
             </div>
             <div>
-                <p class="absolute bottom-0 inset-x-0 text-slate-500 font-semibold">Already have an account? Sign in</p>
+                <p class="absolute bottom-0 inset-x-0 p-4 text-slate-500 font-semibold">Already have an account? <a href="../../src/auth/login.html">Sign in</a></p>
             </div>
         </form>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="alertMessage"></p>
+        </div>
     </div>
     <script defer src="../auth/register.js"></script>
 </body>

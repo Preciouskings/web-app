@@ -1,4 +1,4 @@
-const API_URL = 'https://home-ease.onrender.com/api/ecommerce'
+const API_URL = 'https://api.homeease.ng/api/ecommerce'
 
 function generateHTML(ecommerce) {
   return `
@@ -15,9 +15,9 @@ function generateHTML(ecommerce) {
     <div class="mt-2 flex">
       <button class="bg-gray-300 p-1 px-10 rounded-sm" onclick="handleDetailsClick('${ecommerce.id}')">Details</button>
     <div class="bg-green-900 p-1 rounded-sm order-last">
-        <img src="../img/chat.png" class="w-6 h-auto" alt="">
+        <img src="../../img/chat.png" class="w-6 h-auto" alt="">
       </div>
-      <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm"><a href="https://wa.me/2349039770569">Message</a></p>
+      <p class="bg-green-900 p-1 px-4 ml-20 text-white rounded-sm"><a href="https://wa.me/${ecommerce.phone_number}">Message</a></p>
     </div>
   `;
 }
