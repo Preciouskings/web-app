@@ -1,11 +1,11 @@
 const API_URL = 'https://api.homeease.ng/api/lodges'
 
 // Retrieve the access token from local storage
-  const accessToken = localStorage.getItem("accessToken");
-  console.log(accessToken);
+  const access_token = localStorage.getItem("access_token");
+  console.log(access_token);
 
   // Check if the access token is available
-  if (!accessToken) {
+  if (!access_token) {
     // Handle the case where the access token is not available (e.g., user needs to log in)
     window.location.href = "../../src/auth/login.html";
   }
@@ -22,7 +22,7 @@ document.getElementById("lodgeForm").addEventListener("submit", function (e) {
 
   // Create headers with the access token as a bearer token
   const headers = {
-    Authorization: `Bearer ${accessToken}`,
+    Authorization: `Bearer ${access_token}`,
     "Content-Type": "application/json",
   };
 
@@ -30,7 +30,8 @@ document.getElementById("lodgeForm").addEventListener("submit", function (e) {
   fetch(API_URL, {
     method: "POST",
     headers,
-    body: JSON.stringify(userData),
+    body: userData,
+      
   })
     .then((response) => {
       if (response.ok) {

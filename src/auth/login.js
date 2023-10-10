@@ -35,12 +35,13 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     })
     .then((data) => {
       // Handle the response data, which should include access and refresh tokens
-      const { accessToken, refreshToken } = data;
-      console.log("Access Token:", accessToken);
-      console.log("Refresh Token:", refreshToken);
+      // console.log(data);
+      const { access_token, refresh_token } = data;
+      console.log("Access Token:", access_token);
+      console.log("Refresh Token:", refresh_token);
 
       // Storing the access token
-      localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem("access_token", access_token);
 
       // Show a "Login Success" alert for 2 seconds
       showModal("Login Success");
