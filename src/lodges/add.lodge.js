@@ -19,19 +19,20 @@ document.getElementById("lodgeForm").addEventListener("submit", function (e) {
   formData.forEach((value, key) => {
     userData[key] = value;
   });
+  console.log(userData);
 
   // Create headers with the access token as a bearer token
   const headers = {
     Authorization: `Bearer ${access_token}`,
-    "Content-Type": "application/json",
+    // "Content-Type": "application/json",
   };
 
   // Make a POST request with the form data and headers
   fetch(API_URL, {
     method: "POST",
     headers,
-    body: userData,
-      
+    // body: JSON.stringify(userData),
+    body: formData
   })
     .then((response) => {
       if (response.ok) {
