@@ -43,7 +43,7 @@ const Card: Component = () => {
 const HomePage: Component = () => {
   const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <div class="flex flex-col h-full w-full">
+    <div class="flex flex-col h-screen w-full">
       <div class="grow overflow-y-scroll">
         <Navbar />
         <div>
@@ -60,7 +60,9 @@ const HomePage: Component = () => {
           </div>
         </div>
       </div>
-      <BottomNav />
+      <div class="shadow-[0px_-5px_16px_8px_rgba(0,0,0,0.25)]">
+        <BottomNav />
+      </div>
     </div>
   );
 };

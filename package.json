@@ -1,4 +1,7 @@
 {
+  "name": "@homeease/web-app",
+  "version": "0.0.0",
+  "description": "Home Ease web app",
   "scripts": {
     "dev": "vite --port 3000",
     "build": "tsc && vite build",
