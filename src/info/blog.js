@@ -1,7 +1,7 @@
 const fetchSinglePost = async (username) => {
   const query = JSON.stringify({
     query: `{
-        user(username: "Preciouskings") {
+        user(username: "") {
                   publication {
                 
                 {
@@ -19,7 +19,7 @@ const fetchSinglePost = async (username) => {
         }`,
   });
 
-  const response = await fetch("https://api.hashnode.com/", {
+  const response = await fetch("", {
     method: "post",
     body: query,
     headers: {
@@ -31,4 +31,4 @@ const fetchSinglePost = async (username) => {
   console.log(jsonResponse);
 };
 
-fetchSinglePost("Preciouskings");
+fetchSinglePost("");
