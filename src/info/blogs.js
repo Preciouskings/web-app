@@ -1,7 +1,7 @@
 const fetchPostsByUsername = async (username) => {
   const query = JSON.stringify({
     query: `{
-                user(username: "Preciouskings") {
+                user(username: "") {
                   publication {
                     posts(page: 0) {
                       _id
@@ -14,7 +14,7 @@ const fetchPostsByUsername = async (username) => {
         }`,
   });
 
-  const response = await fetch("https://api.hashnode.com/", {
+  const response = await fetch("", {
     method: "post",
     body: query,
     headers: {
@@ -26,4 +26,4 @@ const fetchPostsByUsername = async (username) => {
   console.log(jsonResponse);
 };
 
-fetchPostsByUsername("Preciouskings");
+fetchPostsByUsername("");
